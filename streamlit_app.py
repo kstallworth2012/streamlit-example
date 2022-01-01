@@ -16,11 +16,11 @@ In the meantime, below is an example of what you can do with just a few lines of
 """
 
 
-nba_dataFrame = pd.read_csv('Seasons_Stats.csv')
+# nba_dataFrame = pd.read_csv('Seasons_Stats.csv')
 
-nba_df_2001=nba_dataFrame[nba_dataFrame['Year']==2001]
-nba_df_2001_ind = nba_df_2001.set_index(['Tm','PER'])
-st.table(nba_df_2001_ind.sort_index(level=["Tm","PER"],ascending=[True,False]))
+# nba_df_2001=nba_dataFrame[nba_dataFrame['Year']==2001]
+# nba_df_2001_ind = nba_df_2001.set_index(['Tm','PER'])
+# st.table(nba_df_2001_ind.sort_index(level=["Tm","PER"],ascending=[True,False]))
 
 
 
