@@ -25,6 +25,34 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 
 
+import matplotlib.pyplot as plt
+
+
+sales_df = pd.read_csv("5000 Sales Records.csv")
+europe_sales_df = sales_df[sales_df['Region']=='Europe'].set_index(["Region","Country"])
+
+asia_sales_df = sales_df[sales_df['Region']=='Asia']
+Africa_sales_df = sales_df[sales_df['Region']=='Sub-Saharan Africa']
+Middle_East_sales_df = sales_df[sales_df['Region']=='Middle East and North Africa']
+Central_America_sales_df = sales_df[sales_df['Region']=='Central America and the Caribbean']
+Aussie_sales_df = sales_df[sales_df['Region']=='Australia and Oceania']
+NorthAmerica_sales_df = sales_df[sales_df['Region']=='North America']
+
+st.header("Sales Data")
+
+st.header("North American Sales")
+st.header("European Sales")
+st.table(europe_sales_df.head().sort_values("Country"))
+avg_sales_by_country = europe_sales_df.groupby("Country")["Total Profit"].mean()
+st.table(avg_sales_by_country)
+st.bar_chart(avg_sales_by_country)
+
+st.header("Asian Sales")
+# st.table(asia_sales_df)
+st.table(europe_sales_df[europe_sales_df["Order Date"] > "2017"])
+
+avg_asia_sales = asia_sales_df.groupby("Country")["Total Profit"].mean()
+st.bar_chart(avg_asia_sales)
 
 
 
