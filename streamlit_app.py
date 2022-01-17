@@ -42,14 +42,14 @@ st.header("Sales Data")
 
 st.header("North American Sales")
 st.header("European Sales")
-st.table(europe_sales_df.head().sort_values("Country"))
+st.table(europe_sales_df.head().sort_values("Country").head())
 avg_sales_by_country = europe_sales_df.groupby("Country")["Total Profit"].mean()
-st.table(avg_sales_by_country)
+st.table(avg_sales_by_country.head())
 st.bar_chart(avg_sales_by_country)
 
 st.header("Asian Sales")
 # st.table(asia_sales_df)
-st.table(europe_sales_df[europe_sales_df["Order Date"] > "2017"])
+st.table(europe_sales_df[europe_sales_df["Order Date"] > "2017"].head())
 
 avg_asia_sales = asia_sales_df.groupby("Country")["Total Profit"].mean()
 st.bar_chart(avg_asia_sales)
