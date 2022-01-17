@@ -3,7 +3,7 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-
+import matplotlib.pyplot as plt
 """
 # Welcome to Streamlit!
 
@@ -25,7 +25,7 @@ In the meantime, below is an example of what you can do with just a few lines of
 
 
 
-import matplotlib.pyplot as plt
+
 
 
 sales_df = pd.read_csv("5000 Sales Records.csv")
