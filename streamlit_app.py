@@ -42,6 +42,11 @@ st.header("Sales Data")
 
 st.header("North American Sales")
 st.table(NorthAmerica_sales_df.head())
+avg_NA_sales = NorthAmerica_sales_df.groupby("Country")["Total Profit"].mean()
+st.bar_chart(avg_NA_sales)
+
+
+
 st.header("European Sales")
 st.table(europe_sales_df.head().sort_values("Country").head())
 avg_sales_by_country = europe_sales_df.groupby("Country")["Total Profit"].mean()
