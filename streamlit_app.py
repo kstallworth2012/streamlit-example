@@ -41,7 +41,22 @@ st.button('BEGIN')
 st.checkbox('I agree')
 st.radio('Pick one', ['Asia', 'Africa','Middle East','Central America','Australia and Oceania', 'North America'])
 st.selectbox('Pick one', ['Asia', 'Africa','Middle East','Central America','Australia and Oceania', 'North America'])
+
+
+if st.checkbox('Show dataframe'):
+    chart_data = pd.DataFrame(
+       np.random.randn(20, 3),
+       columns=['a', 'b', 'c'])
+
+    chart_data
+
+
 st.header("Sales Data")
+
+
+
+
+
 
 st.header("North American Sales")
 st.table(NorthAmerica_sales_df.head())
