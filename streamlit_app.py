@@ -37,7 +37,10 @@ Middle_East_sales_df = sales_df[sales_df['Region']=='Middle East and North Afric
 Central_America_sales_df = sales_df[sales_df['Region']=='Central America and the Caribbean']
 Aussie_sales_df = sales_df[sales_df['Region']=='Australia and Oceania']
 NorthAmerica_sales_df = sales_df[sales_df['Region']=='North America']
-
+st.button('BEGIN')
+st.checkbox('I agree')
+st.radio('Pick one', ['Asia', 'Africa','Middle East','Central America','Australia and Oceania', 'North America'])
+st.selectbox('Pick one', ['Asia', 'Africa','Middle East','Central America','Australia and Oceania', 'North America'])
 st.header("Sales Data")
 
 st.header("North American Sales")
